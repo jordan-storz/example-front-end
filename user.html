@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Example Front End</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
-  <body class="container">
+</head>
+
+<body class="container">
     <header>
-      <h1>Sticker App</h1>
+        <h1>Sticker App</h1>
     </header>
     <main>
-      <h2>Users:</h2>
-      <section class="users panel panel-default">
-      </section>
+        <h2>Users:</h2>
+        <section class="users panel panel-default">
+        </section>
+        <h2>Stickers:</h2>
+        <section class="stickers panel panel-default">
+        </section>
+
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="./user.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-
-    <script type="x-handlebars-template" id="user-template">
-      <h4>{{email}}</h4>
+    <script type="x-handlebars-template" id="sticker-template">
+        {{#each stickers}}
+        <img src="{{image_url}}" alt=""> {{/each}}
     </script>
-  </body>
+    <script type="x-handlebars-template" id="user-template">
+        <h4>{{email}}</h4>
+    </script>
+</body>
+
 </html>
