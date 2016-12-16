@@ -12,9 +12,20 @@
         <h1>Sticker App</h1>
     </header>
     <main>
-        <a id="luke" href="user.html?id=1" class="btn btn-primary">Luke</a>
-        <a id="jordan" href="user.html?id=2" class="btn btn-primary">Jordan</a>
+
     </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <script src="./index.js" charset="utf-8"></script>
+
+    <script type="x-handlebars-template" id="users-template">
+    {{#each users}}
+    <a href="user.html?id={{user.id}}" class="btn btn-primary">{{email}}</a>
+    {{/each}}
+
+    </script>
 
 </body>
 
