@@ -49,7 +49,7 @@ $(document).ready(() => {
     });
 
     function getSticker(id) {
-        return $.get('http://localhost:3000/user/' + id + '/sticker', function(data) {
+        return $.get('https://sticker-app.herokuapp.com/user/' + id + '/sticker', function(data) {
             return data;
         })
     }
