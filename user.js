@@ -14,7 +14,7 @@ $(document).ready(() => {
     }
 
     function getUserInfo(id) {
-        var ENDPOINT = 'http://localhost:3000/user/' + id;
+        var ENDPOINT = 'https://sticker-app.herokuapp.com/user' + id;
         return $.get(ENDPOINT, (response) => {
             return response;
         });
